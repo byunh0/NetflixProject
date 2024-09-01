@@ -9,7 +9,7 @@ import netflex from '../img/netflex.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
 import {useNavigate}from 'react-router-dom';
-
+import {Outlet} from "react-router-dom";
 import "../App.css"
 
 
@@ -53,7 +53,9 @@ const AppLayout = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    <Outlet/>
     </Container>
+
   )
 }
 

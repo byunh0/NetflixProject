@@ -1,19 +1,19 @@
 
 .banner{
     height: 56vh;
-    background-position:left;
+    background-position:center;
     background-repeat:no-repeat;
     background-size:cover;
+    width:100%
     
 }
 .banner:before{
     content:'';
-    background:linean-gradient(to top,black,transparent);
+    background:linear-gradient(to top,black,transparent);
     position:absolute;
     left: 0;
     height: 56vh;
     width:100%;
-
 }
 
 .banner-text-area{
@@ -32,4 +32,15 @@
 
 .white{
     color:white;
+}
+
+@media (orientation: portrait){
+    .banner{
+        width:90vh;
+        max-width:90%;
+    }
+    .banner-text-area{
+        width:90vh;
+        max-width:90%;
+    }
 }
