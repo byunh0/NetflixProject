@@ -7,9 +7,12 @@ import MovieDetail from './pages/moviedetail/MovieDetail'
 import NotFoundPage from './pages/notfoundpage/NotFoundPage'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
+import Banner from './pages/homepage/components/banner/Banner'
+
 const App = () => {
+
   return (
-  
+    
    <Routes>
     <Route path="/" element={<AppLayout/>}>
       //홈페이지 

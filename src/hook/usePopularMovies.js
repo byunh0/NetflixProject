@@ -1,14 +1,19 @@
 import {useQuery} from "@tanstack/react-query";
 import api from "../utils/api"
-const fetchPopularMovies =async () => {
+const fetchPopularMovies =() => {
+ 
+        return api.get('/movie/popular');
+}   
+const testFetchPopularMovies = async () => {
     try {
-        const response = await api.get('/movie/popular');
-        console.log(response.data); // API 응답 데이터를 로그로 확인
-        return response.data;
+      const response = await fetchPopularMovies();
+      console.log("Fetched popular movies:", response.data);
     } catch (error) {
-        console.error("Error fetching popular movies:", error);
+      console.error("Error fetching popular movies:", error);
     }
-}
+  };
+  
+  testFetchPopularMovies();
 export const usePopularMoviesQuery=()=>{
     return useQuery({
         queryKey: ['movie-popular'],
