@@ -1,7 +1,18 @@
 import React from 'react'
 import { Badge } from 'react-bootstrap'
 import './MovieCard.style.css'
+import { useMovieGenreQuery } from '../../hook/useMovieGenre';
 const MovieCard = ({movie}) => {
+  const {data:genreData}=useMovieGenreQuery();
+  const showGenre=(genreIdList)=>{
+    if(!genreData) return [] //map함수이므로 
+    const genreNameList=genreIdList.map((id)=>{
+     const genreObj= genreData.find((genre)=>genre.id===id)
+     return genreObj.name;
+    })
+    return genreNameList
+  }
+  console.log("ggg",genreData);
   return (
     <div 
     style={{backgroundImage:"url("+
@@ -11,11 +22,12 @@ const MovieCard = ({movie}) => {
 <div className="overlay">
     <h1>{movie.title} </h1>
    
-    {movie.genre_ids.map((id)=> <Badge bg="danger" className="badge-id">{id}</Badge>)}
-    <div>{movie.vote_average}</div>
-    <div>{movie.popularity}</div>
+    {showGenre(movie.genre_ids).map((id)=> <Badge bg="danger" className="badge-id">{id}</Badge>)}
+    <div>{movie.vote_average.toFixed(1)}</div>
+    <div>{movie.release_date}</div>
     <div>{movie.adult?"19세이상":""}</div>
     </div>
+   
 </div>
     
   )

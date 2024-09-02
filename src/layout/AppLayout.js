@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -14,6 +14,14 @@ import "../App.css"
 
 
 const AppLayout = () => {
+  const [keyword,setKeyword]=useState("");
+ const searchByKeyword=(event)=>{
+  event.preventDefault()
+  navigate(`/movie?q=${keyword}`)
+  setKeyword("")
+  //url을 바꿔서 넘겨주기
+
+ }
   const navigate=useNavigate();
   const goHome=()=>{
     navigate('/')
@@ -36,17 +44,18 @@ const AppLayout = () => {
             navbarScroll
           >
             <Nav.Link onClick={goHome}>Home</Nav.Link>
-            <Nav.Link  onClick={goLink}>Link</Nav.Link>
+            <Nav.Link  onClick={goLink}>Movie</Nav.Link>
            
           </Nav>
-          <Form className="d-flex ">
+          <Form className="d-flex " onSubmit={searchByKeyword}>
             <Form.Control
             
               type="search"
               placeholder="Search"
               className="me-2 "
               aria-label="Search"
-           
+              value={keyword}
+              onChange={(event)=>setKeyword(event.target.value)}
             />
             <Button variant="outline-danger"><FontAwesomeIcon icon={faMagnifyingGlass} /></Button>
           </Form>
