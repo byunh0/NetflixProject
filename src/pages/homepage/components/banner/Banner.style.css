@@ -42,5 +42,6 @@
     .banner-text-area{
         width:90vh;
         max-width:90%;
+        font-size:smaller;
     }
 }
