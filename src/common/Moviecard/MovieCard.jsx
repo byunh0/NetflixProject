@@ -2,6 +2,7 @@ import React from 'react'
 import { Badge } from 'react-bootstrap'
 import './MovieCard.style.css'
 import { useMovieGenreQuery } from '../../hook/useMovieGenre';
+
 const MovieCard = ({movie}) => {
   const {data:genreData}=useMovieGenreQuery();
   const showGenre=(genreIdList)=>{
