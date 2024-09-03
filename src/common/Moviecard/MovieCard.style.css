@@ -3,7 +3,9 @@
     height:330px;
     background-size:cover;
     cursor:pointer;
-    transition:0.5s; 
+    transition:0.5s;
+    border-radius:5px; 
+    margin-bottom:10px;
  
 }
 
