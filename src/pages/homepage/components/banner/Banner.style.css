@@ -33,6 +33,12 @@
 .white{
     color:white;
 }
+.bigContainer{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:56vh;
+}
 
 @media (orientation: portrait){
     .banner{

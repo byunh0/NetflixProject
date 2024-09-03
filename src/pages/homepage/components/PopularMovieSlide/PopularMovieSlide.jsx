@@ -6,11 +6,12 @@ import "react-multi-carousel/lib/styles.css";
 import { Alert } from 'bootstrap';
 import MovieSlider from '../../../../common/MovieSlider/MovieSlider';
 import {responsive}from "../../../../constants/responsive"
+import './PopularMovieSlide.style.css'
 const PopularMovieSlide = () => {
   const {data,isLoading,isError,error}= usePopularMoviesQuery()
 
   if(isLoading){
-    return <ClipLoader color ="#f88c6b" loading={isLoading} size={70}/>
+    return <div className="bigContainer"><ClipLoader color ="#f88c6b" loading={isLoading} size={70} /></div>
   }
   if(isError){
     return <Alert varient ="danger">{error.message}</Alert>

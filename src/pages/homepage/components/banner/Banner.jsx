@@ -7,7 +7,7 @@ import './Banner.style.css'
 const Banner = () => {
     const {data,isLoading, error,isError}=usePopularMoviesQuery();
     console.log("ddd",data)
-    if (isLoading) {return <div className="bigContainer"><ClipLoader color ="#f88c6b" loading={isLoading} size={70}/></div> } ;
+    if (isLoading) {return <div className="bigContainer"><ClipLoader color ="#f88c6b" loading={isLoading} size={70} /></div> } ;
     if (isError) return<Alert  variant="danger">{error.message}</Alert>;
   
   return (

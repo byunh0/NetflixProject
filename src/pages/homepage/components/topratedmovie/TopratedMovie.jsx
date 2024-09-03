@@ -8,7 +8,7 @@ const TopratedMovie = () => {
     const {data, isLoading,isError,error}=useTopRatedMovies();
    
     if(isLoading){
-        return <ClipLoader color ="#f88c6b" loading={isLoading} size={70}/>
+        return  <div className="bigContainer"><ClipLoader color ="#f88c6b" loading={isLoading} size={70} className="cliploader"/></div>
     }
     if(isError){
         return <Alert varient ="danger">{error.message}</Alert>
