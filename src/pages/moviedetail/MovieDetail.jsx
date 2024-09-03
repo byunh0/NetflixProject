@@ -29,12 +29,12 @@ const Moviedetail = () => {
 
   
   return (
-    <Container style={{height:"100vh"}}> 
-<Row>
-  <Col >
-<div><img src={`https://media.themoviedb.org/t/p/w600_and_h900_bestv2${data?.poster_path}`}/></div>
+    <Container style={{height:"100vh"}} > 
+<Row className="movieDetail-container">
+  <Col className="img-wrapper-container">
+<div><img src={`https://media.themoviedb.org/t/p/w600_and_h900_bestv2${data?.poster_path}`} className="img-wrapper"/></div>
   </Col>
-  <Col className="Detail-container">
+  <Col className="Detail-container" >
 <div className="Detail-margin">{data?.genres.map((id)=><Badge bg="danger" className="Detail-margin-Badge">{id.name}</Badge>)}</div>
 <div className="Detail-title">{data?.title}</div>
 <div className="Detail-margin">{data?.tagline}</div>

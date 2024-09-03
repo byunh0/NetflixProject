@@ -20,4 +20,39 @@
 
 .Badge-padding{
 padding:10px;
+margin-right:10px;
+}
+
+@media(orientation:portrait){
+    .movieDetail-container{
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items:center;
+        width:auto;
+        max-width:300px;
+        
+    }
+    .img-wrapper{
+       width:auto;
+       max-width:300px;
+       
+
+    }
+
+    .img-wrapper-container{
+        display:flex;
+        justify-content: center;
+    }
+
+    .Detail-title{
+        font-size:30px;
+    }
+    
+    .Detail-margin{
+        margin:10px;
+        font-size:15px;
+    }
+    
+    
 }
