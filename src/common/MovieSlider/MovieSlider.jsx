@@ -16,6 +16,7 @@ const MovieSlider = ({title,movies,responsive}) => {
 >
     {/* 중괄호 쓰면 무조건 return써야함. 아니면 {}쓰지말고 바로써야함. */}
 {movies.map((movie,index)=><MovieCard movie={movie} key={index}/>)}
+
 </Carousel>
 
     </div>

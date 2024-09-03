@@ -9,7 +9,7 @@ import {responsive}from "../../../../constants/responsive"
 import './PopularMovieSlide.style.css'
 const PopularMovieSlide = () => {
   const {data,isLoading,isError,error}= usePopularMoviesQuery()
-
+console.log("dataa",data)
   if(isLoading){
     return <div className="bigContainer"><ClipLoader color ="#f88c6b" loading={isLoading} size={70} /></div>
   }

@@ -1,0 +1,23 @@
+.Detail-title{
+    font-size:50px;
+}
+
+.Detail-margin{
+    margin:20px;
+    font-size:20px;
+}
+
+.Detail-margin-Badge{
+    margin-right:10px;
+    padding:10px;
+}
+
+.Detail-container{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.Badge-padding{
+padding:10px;
+}
