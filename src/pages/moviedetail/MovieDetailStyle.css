@@ -36,7 +36,8 @@ margin-right:10px;
     .img-wrapper{
        width:auto;
        max-width:300px;
-       height:auto;
+       /* height:auto;
+       max-width:400px; */
 
     }
 
@@ -59,6 +60,10 @@ margin-right:10px;
         flex-direction:column;
         justify-content: center;
         align-items:center;
+        /* width:auto;
+        max-width:300px;
+        height:auto; */
+        
     }
 
     .Detail-container{
