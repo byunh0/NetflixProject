@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { useSearchMovieQuery } from '../../hook/useSearchMovieQuery';
-import { useSearchParams } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Alert } from 'bootstrap';
 import { ClipLoader } from 'react-spinners';
 import { Col, Container, Row } from 'react-bootstrap';
 import MovieCard from '../../common/Moviecard/MovieCard';
 import ReactPaginate from 'react-paginate';
+import './MovieStyle.css'
 //경로 2가지
 //1.navbar에서 클릭해서 온경우=>popularmovie보여줌.
 //2.키워드를 입력해서 온 경우=> keyword와 관련된 영화들을 보여줌.
@@ -14,7 +15,9 @@ const Movie = () => {
   const keyword = query.get("q");
   const [page,setPage]=useState(1);
   const {data,isLoading,isError,error}=useSearchMovieQuery({keyword,page})
+  const navigate=useNavigate();
  console.log("ddd",data)
+ const totalPages = Math.min(data?.total_pages || 1, 12);
   const handlePageClick=({selected})=>{
  setPage(selected+1);
   }
@@ -34,28 +37,29 @@ const Movie = () => {
       <Row>
       {data?.results.map((movie)=>(<Col lg={4} xs={12}><MovieCard movie={movie}/></Col>))}
       </Row>
-      </Col>
       <ReactPaginate
         nextLabel="next >"
         onPageChange={handlePageClick}
         pageRangeDisplayed={3}
         marginPagesDisplayed={2}
-        pageCount={12}//전체페이지
+        pageCount={totalPages}//전체페이지
         previousLabel="< previous"
         pageClassName="page-item"
-        pageLinkClassName="page-link"
+        pageLinkClassName="page-link2"
         previousClassName="page-item"
-        previousLinkClassName="page-link"
+        previousLinkClassName="page-link2"
         nextClassName="page-item"
-        nextLinkClassName="page-link"
+        nextLinkClassName="page-link2"
         breakLabel="..."
         breakClassName="page-item"
-        breakLinkClassName="page-link"
-        containerClassName="pagination"
+        breakLinkClassName="page-link2"
+        containerClassName="pagination2"
         activeClassName="active"
         renderOnZeroPageCount={null}
         forcePage={page-1}//처음 초기값은 1이었는데 react가 0부터 카운트 0일때 1로
       />
+      </Col>
+    
     </Row>
     </Container>
   )

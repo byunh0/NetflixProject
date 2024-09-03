@@ -29,12 +29,15 @@ const AppLayout = () => {
   const goLink=()=>{
     navigate('/movie')
   }
+  const goimg=()=>{
+    navigate('/')
+  }
   return (
    <Container>
     <Navbar expand="lg"  variant="dark " >
       <Container fluid >
         <Navbar.Brand href="#">
-         <img src={netflex} width={100} height={50} style={{marginLeft:'15px'}}/>
+         <img src={netflex} width={100} height={50} style={{marginLeft:'15px'}} onClick={goimg}/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
