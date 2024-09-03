@@ -29,14 +29,14 @@ const Movie = () => {
   return (
     <Container>
     <Row>
-      <Col lg={4} xs={12}>
+      <Col lg={4} md={6} xs={12} className="Movie-filter-space">
       {""}
       필터 {""}
       </Col>
-      <Col lg={8} xs={12}>
+      <Col lg={8} xs={12} >
       <Row>
-      {data?.results.map((movie)=>(<Col lg={4} xs={12}><MovieCard movie={movie}/></Col>))}
-      </Row>
+      {data?.results.map((movie)=>(<Col lg={4} md={6} xs={12} className="Movie-movie-space"><MovieCard movie={movie}/></Col>))}
+      
       <ReactPaginate
         nextLabel="next >"
         onPageChange={handlePageClick}
@@ -58,6 +58,7 @@ const Movie = () => {
         renderOnZeroPageCount={null}
         forcePage={page-1}//처음 초기값은 1이었는데 react가 0부터 카운트 0일때 1로
       />
+      </Row>
       </Col>
     
     </Row>

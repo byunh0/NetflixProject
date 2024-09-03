@@ -7,11 +7,13 @@ import './MovieDetailStyle.css'
 import { useMovieGenreQuery } from '../../hook/useMovieGenre';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ClipLoader } from 'react-spinners';
+import { useReview } from '../../hook/useReview';
 const Moviedetail = () => {
   const{id}=useParams();
   const {data:genreData}=useMovieGenreQuery();
-  const {data,isLoading,isError,error}=useMovieDetail({id})
-
+  // const {data:review}=useReview({id});
+  const {data,isLoading,isError,error}=useMovieDetail({id});
+ 
  if (isLoading) {return <div className="bigContainer"><ClipLoader color ="#f88c6b" loading={isLoading} size={70} /></div> } ;
     if (isError) return<Alert  variant="danger">{error.message}</Alert>;
   

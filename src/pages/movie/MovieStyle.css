@@ -44,3 +44,14 @@
     padding-left: 0;
     list-style: none;
 }
+@media(orientation:portrait){
+    .Movie-filter-space{
+     display:none;
+    }
+
+    .Movie-movie-space{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    }
+}
