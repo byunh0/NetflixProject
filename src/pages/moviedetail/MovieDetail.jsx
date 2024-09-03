@@ -29,7 +29,7 @@ const Moviedetail = () => {
 
   
   return (
-    <Container style={{height:"100vh"}} > 
+    <Container style={{height:"100vh"}} className="movieDetail-big-container" > 
 <Row className="movieDetail-container">
   <Col className="img-wrapper-container">
 <div><img src={`https://media.themoviedb.org/t/p/w600_and_h900_bestv2${data?.poster_path}`} className="img-wrapper"/></div>

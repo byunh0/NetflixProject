@@ -50,9 +50,14 @@ margin-right:10px;
     }
     
     .Detail-margin{
-        margin:10px;
-        font-size:15px;
+        margin:8px;
+        font-size:10px;
     }
     
-    
+    .movieDetail-big-container{
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items:center;
+    }
 }
