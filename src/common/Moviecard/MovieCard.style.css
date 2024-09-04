@@ -56,6 +56,10 @@
     margin-bottom:20px;
     font-size:15px;
 }
+.overlay h1{
+font-size:30px;
+    font-weight: 200;
+}
 @media(oreintation:portrait){
     .movie-card:hover{
     

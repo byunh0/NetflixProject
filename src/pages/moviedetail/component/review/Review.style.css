@@ -1,0 +1,30 @@
+
+.review-box{
+    border:2px solid red;
+    border-radius: 15px;
+    padding:5px;
+    margin:10px;
+    
+}
+
+.moviedetail-compo-title{
+    font-size:30px;
+    font-weight: 200;
+}
+
+.review-toggle-button{
+    border-bottom :1px solid rgb(175, 174, 174);
+    color:rgb(175, 174, 174);
+    background-color:none;
+}
+.review-toggle-button:hover{
+    cursor:pointer;
+}
+
+@media(orientation:portrait){
+    .review-container{
+        width:auto;
+        height: auto;
+    }
+}
+

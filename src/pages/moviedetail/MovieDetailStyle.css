@@ -26,14 +26,14 @@ margin-right:10px;
 .movieDetail-container{
     height:100vh;
 }
-@media (max-width: 768px){
+@media (orientation:portrait){
     .movieDetail-container{
         display:flex;
         flex-direction:column;
         justify-content: center;
         align-items:center;
         width:auto;
-        max-width: none; /* 최대 너비를 제거 */
+        /* max-width: none;  */
         height:auto;
        
         

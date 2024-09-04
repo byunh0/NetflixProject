@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { ClipLoader } from 'react-spinners';
 import { useReview } from '../../hook/useReview';
 import Recomendation from './component/Recomendation';
+import Review from './component/review/Review';
 const Moviedetail = () => {
   const{id}=useParams();
   const {data:genreData}=useMovieGenreQuery();
@@ -50,6 +51,9 @@ const Moviedetail = () => {
 </Row>
 <Row>
       <Recomendation id={id} className="Recomendation"/>
+</Row>
+<Row>
+      <Review id={id}/>
 </Row>
     </Container> 
   )
