@@ -18,7 +18,8 @@ const Recomendation = ({id}) => {
   console.log("recmo",data)
   return (
     <div>
-  <MovieSlider title={"Recomendation"} movies={data?.results} responsive={responsive}/>
+      {data?.results.length==0 ?(<div style={{display:"none"}}></div>):( <MovieSlider title={"Recomendation"} movies={data?.results} responsive={responsive}/>)}
+  {/* <MovieSlider title={"Recomendation"} movies={data?.results} responsive={responsive}/> */}
     </div>
   )
 }
