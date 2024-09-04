@@ -29,13 +29,13 @@ const Moviedetail = () => {
 
   
   return (
-    <Container style={{height:"100vh"}} className="movieDetail-big-container" > 
+    <Container className="movieDetail-big-container" > 
 <Row className="movieDetail-container">
   <Col className="img-wrapper-container">
-<div><img src={`https://media.themoviedb.org/t/p/w600_and_h900_bestv2${data?.poster_path}`} className="img-wrapper"/></div>
+<img src={`https://media.themoviedb.org/t/p/w600_and_h900_bestv2${data?.poster_path}`} className="img-wrapper"/>
   </Col>
   <Col className="Detail-container" >
-<div className="Detail-margin">{data?.genres.map((id)=><Badge bg="danger" className="Detail-margin-Badge">{id.name}</Badge>)}</div>
+<div >{data?.genres.map((id)=><Badge bg="danger" className="Detail-margin-Badge">{id.name}</Badge>)}</div>
 <div className="Detail-title">{data?.title}</div>
 <div className="Detail-margin">{data?.tagline}</div>
 <div className="Detail-margin"><Badge bg="danger" className="Badge-padding">Average</Badge>{data?.vote_average.toFixed(1)}</div>
