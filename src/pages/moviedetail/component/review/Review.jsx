@@ -23,17 +23,19 @@ const handleToggle = (index) => {
 };
 return (
   <div className="review-container">
-  
-    {/* <div className="moviedetail-compo-title">Review</div> */}
+    <div className="moviedetail-compo-title">Review</div> 
+   
     {review?.results.map((item, index) => {
       const content = item?.content;
       const isContentLong = content.length > 400;
       const shortContent = content.slice(0, 400) + '...';
       const isExpanded = expandedStates[index] || false; // 기본값은 false
-
+      
       return (
+        <div>
+           
         <div key={index} className="review-box">
-           {item?.content.length==0?(""): (<div className="moviedetail-compo-title">Review</div>)}
+          
           {isContentLong && !isExpanded ? (
             <>
              
@@ -43,6 +45,7 @@ return (
           ) : (
             <p>{content}</p>
           )}
+        </div>
         </div>
       );
     })}
