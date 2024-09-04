@@ -60,7 +60,7 @@ const AppLayout = () => {
               value={keyword}
               onChange={(event)=>setKeyword(event.target.value)}
             />
-            <Button variant="outline-danger"><FontAwesomeIcon icon={faMagnifyingGlass} /></Button>
+            <Button variant="outline-danger" onClick={searchByKeyword}><FontAwesomeIcon icon={faMagnifyingGlass} /></Button>
           </Form>
         </Navbar.Collapse>
       </Container>

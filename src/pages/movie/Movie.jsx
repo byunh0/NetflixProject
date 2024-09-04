@@ -7,6 +7,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import MovieCard from '../../common/Moviecard/MovieCard';
 import ReactPaginate from 'react-paginate';
 import './MovieStyle.css'
+import NoMovie from './NoMovie';
 //경로 2가지
 //1.navbar에서 클릭해서 온경우=>popularmovie보여줌.
 //2.키워드를 입력해서 온 경우=> keyword와 관련된 영화들을 보여줌.
@@ -35,7 +36,16 @@ const Movie = () => {
       </Col>
       <Col lg={8} xs={12} >
       <Row>
-      {data?.results.map((movie)=>(<Col lg={4} md={6} xs={12} className="Movie-movie-space"><MovieCard movie={movie}/></Col>))}
+      {data?.results?.length === 0 ? (
+  <Col><NoMovie/></Col>
+) : (
+  data?.results?.map((movie) => (
+    <Col lg={4} md={6} xs={12} className="Movie-movie-space" key={movie.id} >
+      <MovieCard movie={movie} />
+    </Col>
+  ))
+)}
+      {/* {data?.results.map((movie)=>(<Col lg={4} md={6} xs={12} className="Movie-movie-space"><MovieCard movie={movie}/></Col>))} */}
       
       <ReactPaginate
         nextLabel="next >"

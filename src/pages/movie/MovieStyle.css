@@ -1,7 +1,4 @@
-.pagination{
-   
 
-}
 
 .page-link2{
     background-color:none;
@@ -44,6 +41,13 @@
     padding-left: 0;
     list-style: none;
 }
+.forNoMovie{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 @media(orientation:portrait){
     .Movie-filter-space{
      display:none;

@@ -26,14 +26,15 @@ return (
     <div className="moviedetail-compo-title">Review</div>
     {review?.results.map((item, index) => {
       const content = item?.content;
-      const isContentLong = content.length > 500;
-      const shortContent = content.slice(0, 500) + '...';
+      const isContentLong = content.length > 400;
+      const shortContent = content.slice(0, 400) + '...';
       const isExpanded = expandedStates[index] || false; // 기본값은 false
 
       return (
         <div key={index} className="review-box">
           {isContentLong && !isExpanded ? (
             <>
+             
               <p>{shortContent}</p>
               <span className="review-toggle-button" onClick={() => handleToggle(index)}>더보기</span>
             </>
