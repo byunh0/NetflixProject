@@ -23,22 +23,21 @@
 padding:10px;
 margin-right:10px;
 }
-/* .movieDetail-container{
+.movieDetail-container{
     height:100vh;
-} */
+}
 @media(orientation: portrait){
     .movieDetail-container{
         display:flex;
         flex-direction:column;
         justify-content: center;
         align-items:center;
-        width:auto;
-        max-width:300px;
-       
+        width: 100%; /* 모바일 화면의 폭에 맞게 조정 */
+        max-width: none; /* 모바일에서는 최대 폭 제한 제거 */
         
     }
     .img-wrapper{
-       width:auto;
+       width:100%;
        max-width:300px;
        height:auto;
        
@@ -65,10 +64,9 @@ margin-right:10px;
         flex-direction:column;
         justify-content: center;
         align-items:center;
-        /* position:absolute; */
-        /* width:auto;
-        max-width:300px;
-        height:auto; */
+        width: 100%; /* 모바일 화면 폭에 맞게 조정 */
+        height: auto; /* 높이를 자동으로 조정하여 스크롤 가능 */
+        overflow: auto; /* 스크롤 가능하도록 설정 */
         
     }
 
@@ -76,7 +74,12 @@ margin-right:10px;
         display:flex;
         flex-direction:column;
         justify-content:center;
-        width:auto;
-        max-width:300px;
+        width: 100%; /* 모바일 화면 폭에 맞게 조정 */
+        max-width: none; /* 최대 폭 제한 제거 */
     }
+
+    .Recomendation {
+        display: block; /* 모바일에서도 컴포넌트가 보이도록 설정 */
+        margin: 20px 0; /* 여백 설정 */
+      }
 }

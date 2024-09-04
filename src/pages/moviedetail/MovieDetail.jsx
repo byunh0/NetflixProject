@@ -8,6 +8,7 @@ import { useMovieGenreQuery } from '../../hook/useMovieGenre';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ClipLoader } from 'react-spinners';
 import { useReview } from '../../hook/useReview';
+import Recomendation from './component/Recomendation';
 const Moviedetail = () => {
   const{id}=useParams();
   const {data:genreData}=useMovieGenreQuery();
@@ -30,6 +31,7 @@ const Moviedetail = () => {
   
   return (
     <Container className="movieDetail-big-container" > 
+    
 <Row className="movieDetail-container">
   <Col className="img-wrapper-container">
 <img src={`https://media.themoviedb.org/t/p/w600_and_h900_bestv2${data?.poster_path}`} className="img-wrapper"/>
@@ -44,8 +46,10 @@ const Moviedetail = () => {
 <div className="Detail-margin"><Badge bg="danger"  className="Badge-padding">Release Date</Badge>{data?.release_date}</div>
 <hr />
 <div className="Detail-margin">{data?.overview}</div>
-
   </Col>
+</Row>
+<Row>
+      <Recomendation id={id} className="Recomendation"/>
 </Row>
     </Container> 
   )
