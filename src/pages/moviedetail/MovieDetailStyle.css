@@ -60,17 +60,14 @@ margin-right:10px;
        
     }
     
-    .movieDetail-big-container{
+    /* .movieDetail-big-container{
         display:flex;
         flex-direction:column;
         justify-content: center;
         align-items:center;
-        /* position:absolute; */
-        /* width:auto;
-        max-width:300px;
-        height:auto; */
+      
         
-    }
+    } */
 
     .Detail-container{
         display:flex;
@@ -79,4 +76,9 @@ margin-right:10px;
         width:auto;
         max-width:300px;
     }
+
+     /* position:absolute; */
+        /* width:auto;
+        max-width:300px;
+        height:auto; */
 }
