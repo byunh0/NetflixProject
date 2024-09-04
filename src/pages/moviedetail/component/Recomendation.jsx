@@ -10,7 +10,7 @@ const Recomendation = ({id}) => {
    
   return (
     <div>
-  <MovieSlider title={"Recomendation"} movies={data?.results} responsive={responsive}/>
+  {/* <MovieSlider title={"Recomendation"} movies={data?.results} responsive={responsive}/> */}
     </div>
   )
 }
