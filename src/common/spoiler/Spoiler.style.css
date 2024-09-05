@@ -67,8 +67,11 @@
 
 @media(orientation:portrait){
   .spoilerstyle_vh {
-    width: auto; /* 모바일에서도 너비를 부모 요소에 맞게 조정 */
-    height: auto; /* 자동 높이 조절 */
+    width: 500px; /* 모바일에서도 너비를 부모 요소에 맞게 조정 */
+    height:350px; /* 자동 높이 조절 */
     aspect-ratio: 9 / 16; /* 모바일에서 비율을 9:16으로 변경 */
 }
+
+
+
 }
