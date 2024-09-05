@@ -3,7 +3,8 @@ import { Badge } from 'react-bootstrap'
 import './MovieCard.style.css'
 import { useMovieGenreQuery } from '../../hook/useMovieGenre';
 import { useNavigate } from 'react-router-dom';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faStar} from '@fortawesome/free-solid-svg-icons'
 
 const MovieCard = ({movie}) => {
   const navigate=useNavigate();
@@ -31,7 +32,7 @@ const MovieCard = ({movie}) => {
     <h1>{movie.title} </h1>
    
     {showGenre(movie.genre_ids).map((id)=> <Badge bg="danger" className="badge-id" >{id}</Badge>)}
-    <div>{movie.vote_average.toFixed(1)}</div>
+    <div><FontAwesomeIcon icon={faStar} /> {movie.vote_average.toFixed(1)}</div>
     <div>{movie.release_date}</div>
     <div>{movie.adult?"19세이상":""}</div>
   

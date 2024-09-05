@@ -8,6 +8,7 @@ import MovieCard from '../../common/Moviecard/MovieCard';
 import ReactPaginate from 'react-paginate';
 import './MovieStyle.css'
 import NoMovie from './NoMovie';
+import Moviegenre from './component/Moviegenre';
 //경로 2가지
 //1.navbar에서 클릭해서 온경우=>popularmovie보여줌.
 //2.키워드를 입력해서 온 경우=> keyword와 관련된 영화들을 보여줌.
@@ -31,13 +32,12 @@ const Movie = () => {
     <Container>
     <Row>
       <Col lg={4} md={6} xs={12} className="Movie-filter-space">
-      {""}
-      필터 {""}
+      <Moviegenre/>
       </Col>
       <Col lg={8} xs={12} >
       <Row>
       {data?.results?.length === 0 ? (
-  <Col><NoMovie/></Col>
+  <Col><NoMovie page={page}/></Col>
 ) : (
   data?.results?.map((movie) => (
     <Col lg={4} md={6} xs={12} className="Movie-movie-space" key={movie.id} >

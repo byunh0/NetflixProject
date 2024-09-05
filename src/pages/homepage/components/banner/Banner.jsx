@@ -5,7 +5,8 @@ import ClipLoader from "react-spinners/ClipLoader"
 import Alert from 'react-bootstrap/Alert';
 import './Banner.style.css'
 import Button from 'react-bootstrap/Button';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlay } from '@fortawesome/free-solid-svg-icons';
 const Banner = ({setSpoiler}) => {
   
    const gospoiler=()=>{
@@ -24,7 +25,8 @@ const Banner = ({setSpoiler}) => {
    <div className="text-white banner-text-area1">
 <h1>{data?.results[0].title}</h1>
 <p>{data && data.results[0].overview}</p>
-<Button variant="light"  onClick={gospoiler}>예고편</Button>
+<Button variant="light"  onClick={gospoiler}>
+<FontAwesomeIcon icon={faPlay} /> Trailer</Button>
    </div>
     </div>
     

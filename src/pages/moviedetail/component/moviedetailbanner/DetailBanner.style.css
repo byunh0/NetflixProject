@@ -19,6 +19,12 @@
     padding:10px;
     
 }
+.spoiler-detail-title{
+    margin-left:50px;
+    z-index:2;
+    width:auto;
+    
+}
 .banner:before{
     content:'';
     background:linear-gradient(to top,black,transparent);
@@ -62,4 +68,5 @@
         max-width:90%;
         font-size:smaller;
     }
+
 }

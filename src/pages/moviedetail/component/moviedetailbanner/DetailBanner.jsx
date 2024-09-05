@@ -6,6 +6,8 @@ import { ClipLoader } from 'react-spinners';
 import { Alert} from 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlay } from '@fortawesome/free-solid-svg-icons';
 const DetailBanner = ({setDespoiler}) => {
     const{id}=useParams();
 const {data,isLoading,isError,error}=useMovieDetail({id});
@@ -19,8 +21,9 @@ const gospoiler=()=>{
     <div  >
         <div style={{backgroundImage:"url("+`https://media.themoviedb.org/t/p/w1066_and_h600_bestv2${data.poster_path}`+")"}}
     className="banner">
-       
-        <Button variant="light" className="spoiler-detail" onClick={gospoiler}>예고편</Button>
+        <div  className="spoiler-detail-title">{data.title}</div>
+        <Button variant="light" className="spoiler-detail" onClick={gospoiler}>
+        <FontAwesomeIcon icon={faPlay} /> Trailer</Button>
         
          </div>
      
