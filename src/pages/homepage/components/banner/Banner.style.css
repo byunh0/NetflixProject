@@ -40,26 +40,29 @@
     height:56vh;
 }
 
-@media (orientation: portrait){
+@media (max-width: 768px) {
     .banner {
-        width: 100%;
-        height: auto; /* 자동으로 높이 조정 */
-        max-width: 90vw; /* 최대 너비 조정 */
+        height: auto; /* 배너 높이를 자동으로 조정 */
         background-size: cover; /* 배경 이미지 크기 조정 */
     }
     
     .banner-text-area {
-        width: auto;
-        font-size: smaller; /* 모바일에서의 기본 글씨 크기 */
-        padding: 1rem; /* 여백 조절 */
-        box-sizing: border-box; /* 패딩과 보더를 요소의 총 크기에 포함 */
+        width: 90%; /* 모바일에서의 너비 조정 */
+        max-width: none; /* 최대 너비 제한 해제 */
+        font-size: 1rem; /* 모바일에서의 기본 글씨 크기 */
+        padding: 1rem; /* 모바일에서의 여백 조정 */
     }
 
-    /* .banner-text-area h1 {
-        font-size: 1.5rem; 
+    .banner-text-area h1 {
+        font-size: 1.5rem; /* 모바일에서의 제목 글씨 크기 */
     }
 
     .banner-text-area p {
-        font-size: 0.875rem; 
-    } */
+        font-size: 1rem; /* 모바일에서의 본문 글씨 크기 */
+    }
+
+    .banner-text-area button {
+        font-size: 0.875rem; /* 모바일에서의 버튼 글씨 크기 */
+        padding: 0.5rem; /* 모바일에서의 버튼 패딩 조정 */
+    }
 }
