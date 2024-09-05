@@ -27,9 +27,6 @@ const Banner = ({setSpoiler}) => {
 <p>{data && data.results[0].overview}</p>
 <button onClick={gospoiler}>예고편</button>
    </div>
-   <div>
-  
-</div>
     </div>
     </div>
   )
