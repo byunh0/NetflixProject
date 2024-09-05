@@ -27,9 +27,7 @@ const Banner = ({setSpoiler}) => {
 <p>{data && data.results[0].overview}</p>
 <Button variant="light" className="playbutton-detail" onClick={gospoiler}>Play</Button>
    </div>
-   <div>
-  
-</div>
+
     </div>
     </div>
   )
