@@ -10,7 +10,10 @@ import { ClipLoader } from 'react-spinners';
 import { useReview } from '../../hook/useReview';
 import Recomendation from './component/Recomendation';
 import Review from './component/review/Review';
+import DetailBanner from './component/moviedetailbanner/DetailBanner';
+import Despoiler from './component/despoiler/Despoiler';
 const Moviedetail = () => {
+  const [despoiler,setDespoiler]=useState(false);
   const{id}=useParams();
   const {data:genreData}=useMovieGenreQuery();
   // const {data:review}=useReview({id});
@@ -31,14 +34,17 @@ const Moviedetail = () => {
 
   
   return (
-    <Container className="movieDetail-big-container" > 
-    
+  
+   <Container className="movieDetail-big-container"  > 
+ 
+    {/* 추가사항 */}
+    <Row><DetailBanner setDespoiler={setDespoiler}/></Row>
 <Row className="movieDetail-container">
   <Col className="img-wrapper-container">
 <img src={`https://media.themoviedb.org/t/p/w600_and_h900_bestv2${data?.poster_path}`} className="img-wrapper"/>
   </Col>
   <Col className="Detail-container" >
-<div >{data?.genres.map((id)=><Badge bg="danger" className="Detail-margin-Badge">{id.name}</Badge>)}</div>
+<div >{data?.genres.map((id)=><Badge bg="danger" className="Detail-margin-Badge" style={{padding:"10px"}}>{id.name}</Badge>)}</div>
 <div className="Detail-title">{data?.title}</div>
 <div className="Detail-margin">{data?.tagline}</div>
 <div className="Detail-margin"><Badge bg="danger" className="Badge-padding">Average</Badge>{data?.vote_average.toFixed(1)}</div>
@@ -47,6 +53,9 @@ const Moviedetail = () => {
 <div className="Detail-margin"><Badge bg="danger"  className="Badge-padding">Release Date</Badge>{data?.release_date}</div>
 <hr />
 <div className="Detail-margin">{data?.overview}</div>
+
+
+
   </Col>
 </Row>
 <Row>
@@ -55,7 +64,15 @@ const Moviedetail = () => {
 <Row>
       <Review id={id}/>
 </Row>
+
+{despoiler&&<div  className="hompageStyle">
+{despoiler==true?(<div><Despoiler setDespoiler={setDespoiler}/></div>):
+    (<div style={{display:"hidden"}}/>)
+}
+  </div>}
     </Container> 
+   
+    
   )
 }
 

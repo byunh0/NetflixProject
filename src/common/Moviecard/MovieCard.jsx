@@ -30,7 +30,7 @@ const MovieCard = ({movie}) => {
 <div className="overlay">
     <h1>{movie.title} </h1>
    
-    {showGenre(movie.genre_ids).map((id)=> <Badge bg="danger" className="badge-id">{id}</Badge>)}
+    {showGenre(movie.genre_ids).map((id)=> <Badge bg="danger" className="badge-id" >{id}</Badge>)}
     <div>{movie.vote_average.toFixed(1)}</div>
     <div>{movie.release_date}</div>
     <div>{movie.adult?"19세이상":""}</div>

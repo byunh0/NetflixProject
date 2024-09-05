@@ -26,6 +26,11 @@ margin-right:10px;
 .movieDetail-container{
     height:100vh;
 }
+.style2{
+    height: 100vh; 
+    overflow: hidden; /* 스크롤을 숨김 */
+  position: relative; 
+}
 @media (orientation:portrait){
     .movieDetail-container{
         display:flex;
