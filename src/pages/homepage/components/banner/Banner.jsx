@@ -4,7 +4,7 @@ import ClipLoader from "react-spinners/ClipLoader"
 
 import Alert from 'react-bootstrap/Alert';
 import './Banner.style.css'
-
+import Button from 'react-bootstrap/Button';
 
 const Banner = ({setSpoiler}) => {
   
@@ -24,7 +24,7 @@ const Banner = ({setSpoiler}) => {
    <div className="text-white banner-text-area1">
 <h1>{data?.results[0].title}</h1>
 <p>{data && data.results[0].overview}</p>
-<button onClick={gospoiler}>예고편</button>
+<Button variant="light"  onClick={gospoiler}>예고편</Button>
    </div>
     </div>
     
