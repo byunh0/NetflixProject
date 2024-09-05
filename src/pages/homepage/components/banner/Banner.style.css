@@ -49,17 +49,17 @@
     }
     
     .banner-text-area {
-        width: 90%;
-        font-size: 1rem; /* 모바일에서의 기본 글씨 크기 */
+        width: auto;
+        font-size: smaller; /* 모바일에서의 기본 글씨 크기 */
         padding: 1rem; /* 여백 조절 */
         box-sizing: border-box; /* 패딩과 보더를 요소의 총 크기에 포함 */
     }
 
-    .banner-text-area h1 {
-        font-size: 1.5rem; /* 모바일에서의 글씨 크기 조정 */
+    /* .banner-text-area h1 {
+        font-size: 1.5rem; 
     }
 
     .banner-text-area p {
-        font-size: 0.875rem; /* 모바일에서의 글씨 크기 조정 */
-    }
+        font-size: 0.875rem; 
+    } */
 }
