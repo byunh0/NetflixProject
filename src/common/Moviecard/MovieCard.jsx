@@ -5,7 +5,7 @@ import { useMovieGenreQuery } from '../../hook/useMovieGenre';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faStar} from '@fortawesome/free-solid-svg-icons'
-
+import {faCalendarDays} from '@fortawesome/free-solid-svg-icons'
 const MovieCard = ({movie}) => {
   const navigate=useNavigate();
   const goDetail=(movie_id)=>{
@@ -33,7 +33,7 @@ const MovieCard = ({movie}) => {
    
     {showGenre(movie.genre_ids).map((id)=> <Badge bg="danger" className="badge-id" >{id}</Badge>)}
     <div><FontAwesomeIcon icon={faStar} /> {movie.vote_average.toFixed(1)}</div>
-    <div>{movie.release_date}</div>
+    <div><FontAwesomeIcon icon={faCalendarDays} /> {movie.release_date}</div>
     <div>{movie.adult?"19세이상":""}</div>
   
     </div>

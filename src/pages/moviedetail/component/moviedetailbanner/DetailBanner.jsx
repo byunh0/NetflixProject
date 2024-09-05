@@ -21,7 +21,7 @@ const gospoiler=()=>{
     <div  >
         <div style={{backgroundImage:"url("+`https://media.themoviedb.org/t/p/w1066_and_h600_bestv2${data.poster_path}`+")"}}
     className="banner">
-        <div  className="spoiler-detail-title">{data.title}</div>
+        <div  className="spoiler-detail-title" style={{fontSize:"30px"}}>{data.title}</div>
         <Button variant="light" className="spoiler-detail" onClick={gospoiler}>
         <FontAwesomeIcon icon={faPlay} /> Trailer</Button>
         

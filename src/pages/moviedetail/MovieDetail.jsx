@@ -59,7 +59,7 @@ const Moviedetail = () => {
   </Col>
 </Row>
 <Row>
-      <Recomendation id={id} className="Recomendation"/>
+      <Recomendation id={id} />
 </Row>
 <Row>
       <Review id={id}/>
