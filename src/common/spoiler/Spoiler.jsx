@@ -40,8 +40,9 @@ const opts: YouTubeProps['opts'] = {
     >
       
       <div className="spoilerstyle_vh">
-        
+         <div className="spoiler-button">
           <Button variant="secondary" className="spoiler-button" onClick={closeButton}>Close</Button>
+          </div>
           {/* <YouTube videoId="2g811Eo7K8U" opts={opts} onReady={onPlayerReady} /> */}
           {idkey ? (
              <div className="video-container">
