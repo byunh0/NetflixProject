@@ -17,7 +17,6 @@ const Banner = ({setSpoiler}) => {
     if (isError) return<Alert  variant="danger">{error.message}</Alert>;
   
   return (
-    <div >
   
     <div style={{backgroundImage:"url("+`https://media.themoviedb.org/t/p/w1066_and_h600_bestv2${data.results[0].poster_path}`+")"}}
     className="banner">
@@ -28,7 +27,7 @@ const Banner = ({setSpoiler}) => {
 <button onClick={gospoiler}>예고편</button>
    </div>
     </div>
-    </div>
+    
   )
 }
 
