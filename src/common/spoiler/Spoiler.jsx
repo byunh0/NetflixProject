@@ -20,12 +20,12 @@ const Spoiler = ({setSpoiler}) => {
   const idkey=youtubeVedio?.data?.results?.[1]?.key
   // console.log("idkey",idkey)
   const onPlayerReady: YouTubeProps['onReady'] = (event) => {
-    event.target.pauseVideo(); // 비디오 플레이어가 준비되면 일시 정지
+    event.target.playVideo(); // 비디오 플레이어가 준비되면 바로 시작
 };
 
 const opts: YouTubeProps['opts'] = {
-    height: '390',
-    width: '640',
+    height: '100%',
+    width: '100%',
     playerVars: {
         autoplay: 1, // 비디오 자동 재생
     },
@@ -44,11 +44,13 @@ const opts: YouTubeProps['opts'] = {
           <Button variant="secondary" className="spoiler-button" onClick={closeButton}>Close</Button>
           {/* <YouTube videoId="2g811Eo7K8U" opts={opts} onReady={onPlayerReady} /> */}
           {idkey ? (
+             <div className="video-container">
                     <YouTube
                         videoId={idkey}
                         opts={opts}
                         onReady={onPlayerReady}
                     />
+                    </div>
                 ) : (
                     <div>sorry for nothing</div>
                 )}
