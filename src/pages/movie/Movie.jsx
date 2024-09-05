@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSearchMovieQuery } from '../../hook/useSearchMovieQuery';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Alert } from 'bootstrap';
@@ -16,6 +16,9 @@ const Movie = () => {
   const [query,setQuery]=useSearchParams();
   const keyword = query.get("q");
   const [page,setPage]=useState(1);
+  useEffect(() => {
+    setPage(1);
+  }, [keyword]);
   const {data,isLoading,isError,error}=useSearchMovieQuery({keyword,page})
   const navigate=useNavigate();
  console.log("ddd",data)
