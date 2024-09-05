@@ -15,10 +15,9 @@ const Banner = ({setSpoiler}) => {
     console.log("ddd",data)
     if (isLoading) {return <div className="bigContainer"><ClipLoader color ="#f88c6b" loading={isLoading} size={70} /></div> } ;
     if (isError) return<Alert  variant="danger">{error.message}</Alert>;
-  
+    
   return (
     <div >
-  
     <div style={{backgroundImage:"url("+`https://media.themoviedb.org/t/p/w1066_and_h600_bestv2${data.results[0].poster_path}`+")"}}
     className="banner">
      
