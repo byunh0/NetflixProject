@@ -41,13 +41,15 @@
 }
 
 @media (orientation: portrait){
-    .banner{
-        width:90vh;
-        max-width:90%;
+    .banner {
+        width: 100%;
+        height: auto; /* 자동으로 높이 조정 */
+        max-width: 90vw; /* 최대 너비 조정 */
     }
-    .banner-text-area{
-        width:90vh;
-        max-width:90%;
-        font-size:smaller;
+    
+    .banner-text-area {
+        width: 90%;
+        font-size: smaller; /* 글씨 크기 조절 */
+        padding: 1rem; /* 여백 조절 */
     }
 }
