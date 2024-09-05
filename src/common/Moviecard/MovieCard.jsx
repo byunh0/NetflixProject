@@ -4,6 +4,7 @@ import './MovieCard.style.css'
 import { useMovieGenreQuery } from '../../hook/useMovieGenre';
 import { useNavigate } from 'react-router-dom';
 
+
 const MovieCard = ({movie}) => {
   const navigate=useNavigate();
   const goDetail=(movie_id)=>{
@@ -33,8 +34,9 @@ const MovieCard = ({movie}) => {
     <div>{movie.vote_average.toFixed(1)}</div>
     <div>{movie.release_date}</div>
     <div>{movie.adult?"19세이상":""}</div>
+  
     </div>
-   
+  
 </div>
     
   )

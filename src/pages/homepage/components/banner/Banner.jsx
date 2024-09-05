@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { usePopularMoviesQuery } from '../../../../hook/usePopularMovies'
 import ClipLoader from "react-spinners/ClipLoader"
 
 import Alert from 'react-bootstrap/Alert';
 import './Banner.style.css'
-const Banner = () => {
+
+
+const Banner = ({setSpoiler}) => {
+  
+   const gospoiler=()=>{
+    setSpoiler(true)
+   }
     const {data,isLoading, error,isError}=usePopularMoviesQuery();
     console.log("ddd",data)
     if (isLoading) {return <div className="bigContainer"><ClipLoader color ="#f88c6b" loading={isLoading} size={70} /></div> } ;
@@ -19,7 +25,11 @@ const Banner = () => {
    <div className="text-white banner-text-area">
 <h1>{data?.results[0].title}</h1>
 <p>{data && data.results[0].overview}</p>
+<button onClick={gospoiler}>예고편</button>
    </div>
+   <div>
+  
+</div>
     </div>
     </div>
   )

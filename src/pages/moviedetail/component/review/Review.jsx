@@ -23,7 +23,7 @@ const handleToggle = (index) => {
 };
 return (
   <div className="review-container">
-    <div className="moviedetail-compo-title">Review</div> 
+    <h3 className="moviedetail-compo-title">Review</h3> 
    
     {review?.results.map((item, index) => {
       const content = item?.content;
