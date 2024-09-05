@@ -5,7 +5,8 @@ import YouTube, { YouTubeProps } from 'react-youtube';
 import { useParams } from 'react-router-dom';
 import { useMovieDetail } from '../../../../hook/useMovieDetail';
 import { useVedio } from '../../../../hook/useVedio';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faX } from '@fortawesome/free-solid-svg-icons';
 
 const Despoiler = ({setDespoiler}) => {
     const closeButton=()=>{
@@ -39,7 +40,7 @@ const opts: YouTubeProps['opts'] = {
       
       <div className="spoilerstyle_vh">
     <div className="spoiler-button">
-       <Button variant="secondary" className="spoiler-button" onClick={closeButton}>Close</Button>
+       <Button variant="secondary" className="spoiler-button" onClick={closeButton}><FontAwesomeIcon icon={faX} /></Button>
          </div>
         
       {idkey ? (
