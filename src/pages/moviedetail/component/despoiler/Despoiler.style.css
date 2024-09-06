@@ -1,0 +1,9 @@
+.sorry-for-nothing{
+    display:flex;
+    justify-content:center;
+    background-color:black;
+    color:rgb(165, 165, 165);
+    height:200px;
+    align-items:center;
+    font-size:25px;
+}

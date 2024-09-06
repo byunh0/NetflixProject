@@ -40,6 +40,11 @@
     height:56vh;
 }
 
+.spoiler-banner-button{
+    padding:15px;
+    width:200px;
+}
+
 @media (orientation: portrait){
     .banner1{
         width:100vh;

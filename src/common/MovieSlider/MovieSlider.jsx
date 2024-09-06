@@ -3,10 +3,12 @@ import './MovieSlider.style.css';
 import MovieCard from '../Moviecard/MovieCard';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faClapperboard } from '@fortawesome/free-solid-svg-icons'
 const MovieSlider = ({title,movies,responsive}) => {
   return (
     <div>
-         <h3>{title}</h3>
+         <h3><FontAwesomeIcon icon={faClapperboard} /> {title}</h3>
         <Carousel
  infinite={true}
  centerMode={true}

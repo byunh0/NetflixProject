@@ -7,7 +7,7 @@ import { useMovieDetail } from '../../../../hook/useMovieDetail';
 import { useVedio } from '../../../../hook/useVedio';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faX } from '@fortawesome/free-solid-svg-icons';
-
+import "./Despoiler.style.css"
 const Despoiler = ({setDespoiler}) => {
     const closeButton=()=>{
         setDespoiler(false);
@@ -52,7 +52,9 @@ const opts: YouTubeProps['opts'] = {
                      />
                    </div>
                 ) : (
+                    <div className="sorry-for-nothing">
                     <div>sorry for nothing</div>
+                    </div>
                 )}
             </div> 
          </div>

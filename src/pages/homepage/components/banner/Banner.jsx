@@ -25,7 +25,7 @@ const Banner = ({setSpoiler}) => {
    <div className="text-white banner-text-area1">
 <h1>{data?.results[0].title}</h1>
 <p>{data && data.results[0].overview}</p>
-<Button variant="light"  onClick={gospoiler}>
+<Button variant="light"  onClick={gospoiler} className="spoiler-banner-button">
 <FontAwesomeIcon icon={faPlay} /> Trailer</Button>
    </div>
     </div>

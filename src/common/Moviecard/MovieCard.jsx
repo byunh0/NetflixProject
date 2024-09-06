@@ -29,7 +29,7 @@ const MovieCard = ({movie}) => {
     className="movie-card" 
     onClick={()=>goDetail(movie.id)}>
 <div className="overlay">
-    <h1>{movie.title} </h1>
+    <h1> {movie.title} </h1>
    
     {showGenre(movie.genre_ids).map((id)=> <Badge bg="danger" className="badge-id" >{id}</Badge>)}
     <div><FontAwesomeIcon icon={faStar} /> {movie.vote_average.toFixed(1)}</div>

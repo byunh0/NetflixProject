@@ -10,7 +10,7 @@ import './MovieStyle.css';
 import NoMovie from './NoMovie';
 import Moviegenre from './component/Moviegenre';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSortDown } from '@fortawesome/free-solid-svg-icons';
+import { faSortDown ,faFire } from '@fortawesome/free-solid-svg-icons';
 
 const Movie = () => {
   const [query, setQuery] = useSearchParams();
@@ -52,7 +52,7 @@ const Movie = () => {
         <Col lg={3} md={6} xs={12}>
           <Moviegenre />
           <div onClick={() => setIsSortedByPopularity(!isSortedByPopularity)} style={{fontSize:"18px" ,marginTop:"5px",marginButton:"5px"}}>
-            Hot <FontAwesomeIcon icon={faSortDown} />
+          <FontAwesomeIcon icon={faFire} /> Hot <FontAwesomeIcon icon={faSortDown} />
           </div>
         </Col>
         <Col lg={9} xs={12}>
