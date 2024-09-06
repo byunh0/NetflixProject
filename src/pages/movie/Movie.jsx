@@ -58,7 +58,7 @@ const Movie = () => {
         <Col lg={9} xs={12}>
           <Row>
             {sortedMovies.length === 0 ? (
-              <Col><NoMovie page={page} /></Col>
+              <Col><NoMovie page={page} keyword={keyword}/></Col>
             ) : (
               sortedMovies.map((movie) => (
                 <Col lg={4} md={6} xs={12} className="Movie-movie-space" key={movie.id}>
