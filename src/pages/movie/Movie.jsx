@@ -51,7 +51,7 @@ const Movie = () => {
       <Row>
         <Col lg={3} md={6} xs={12}>
           <Moviegenre />
-          <div onClick={() => setIsSortedByPopularity(!isSortedByPopularity)}>
+          <div onClick={() => setIsSortedByPopularity(!isSortedByPopularity)} style={{fontSize:"18px" ,marginTop:"5px",marginButton:"5px"}}>
             Hot <FontAwesomeIcon icon={faSortDown} />
           </div>
         </Col>
