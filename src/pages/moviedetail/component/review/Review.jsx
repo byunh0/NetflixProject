@@ -3,6 +3,8 @@ import { useReview } from '../../../../hook/useReview'
 import { ClipLoader } from 'react-spinners'
 import { Alert } from 'react-bootstrap'
 import './Review.style.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
 const Review = ({id}) => {
    const{data:review,isError,isLoading,error} =useReview({id})
    const [expandedStates, setExpandedStates] = useState([]);
@@ -23,7 +25,7 @@ const handleToggle = (index) => {
 };
 return (
   <div className="review-container">
-    <h3 className="moviedetail-compo-title">Review</h3> 
+    <h3 className="moviedetail-compo-title"><FontAwesomeIcon icon={faCheck} /> Review</h3> 
    
     {review?.results.map((item, index) => {
       const content = item?.content;
