@@ -28,7 +28,7 @@ const Moviegenre = () => {
     };
 
     return (
-        <div>
+        <div style={{width:"200px"}}>
             <Form.Select aria-label="Default select example" onChange={handleGenreChange}>
                 <option value="">All page</option>
                 {genreData && genreData.map((genre) => (
